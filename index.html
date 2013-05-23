@@ -15,17 +15,13 @@
       /* GLOBAL STYLES
       -------------------------------------------------- */
       /* Padding below the footer and lighter body text */
-
       body {
         padding-bottom: 40px;
         color: #5a5a5a;
       }
 
-
-
       /* CUSTOMIZE THE NAVBAR
       -------------------------------------------------- */
-
       /* Special class on .container surrounding .navbar, used for positioning it into place. */
       .navbar-wrapper {
         position: absolute;
@@ -66,13 +62,15 @@
         margin-top: 10px;
       }
 
-
-
       /* CUSTOMIZE THE CAROUSEL
       -------------------------------------------------- */
-
       /* Carousel base class */
       .carousel {
+        /*position:absolute;
+        top:0;
+        bottom:0;
+        left:0;
+        right:0;*/
         margin-bottom: 60px;
       }
 
@@ -92,14 +90,14 @@
       }
 
       .carousel .item {
-        height: 500px;
+        height: 100%;
       }
       .carousel img {
         position: absolute;
         top: 0;
         left: 0;
         min-width: 100%;
-        height: 500px;
+        height: 100%;
       }
 
       .carousel-caption {
@@ -120,11 +118,8 @@
         margin-top: 10px;
       }
 
-
-
       /* MARKETING CONTENT
       -------------------------------------------------- */
-
       /* Center align the text within the three columns below the carousel */
       .marketing .span4 {
         text-align: center;
@@ -137,10 +132,8 @@
         margin-right: 10px;
       }
 
-
       /* Featurettes
       ------------------------- */
-
       .featurette-divider {
         margin: 80px 0; /* Space out the Bootstrap <hr> more */
       }
@@ -168,11 +161,8 @@
         letter-spacing: -1px;
       }
 
-
-
       /* RESPONSIVE CSS
       -------------------------------------------------- */
-
       @media (max-width: 979px) {
 
         .container.navbar-wrapper {
@@ -204,7 +194,6 @@
           margin: 0 auto 20px;
         }
       }
-
 
       @media (max-width: 767px) {
 
@@ -306,7 +295,7 @@
             <div class="carousel-caption">
               <h1>About Me.</h1>
               <p class="lead">I'm currently a full-time student studying computer science. I'm interested in numerous other fields, like physics and cosmology. I also like to play hockey.</p>
-              <a class="btn btn-large btn-primary" href="#">See More About Me</a>
+              <a class="btn btn-large btn-primary" href="#">See More</a>
             </div>
           </div>
         </div>
@@ -317,7 +306,7 @@
             <div class="carousel-caption">
               <h1>Computer Science</h1>
               <p class="lead">Ever since I started programming with Java, I have loved to create cool things with code. Click here to see my current projects relating to computer science and more.</p>
-              <a class="btn btn-large btn-primary" href="#">Computer Science</a>
+              <a class="btn btn-large btn-primary" href="#">See More</a>
             </div>
           </div>
         </div>
@@ -328,7 +317,7 @@
             <div class="carousel-caption">
               <h1>Physics</h1>
               <p class="lead">I am fascinated by the scientific processes that make the universe tick. I like to know how things work. I am especially excited when I can combine this interest with my coding interests.</p>
-              <a class="btn btn-large btn-primary" href="#">Physics</a>
+              <a class="btn btn-large btn-primary" href="#">See More</a>
             </div>
           </div>
         </div>
@@ -368,12 +357,11 @@
 
 
       <!-- START THE FEATURETTES -->
-
       <hr class="featurette-divider">
 
       <div class="featurette">
         <img class="featurette-image pull-left" src="./img/browser-icon-chrome.png">
-        <h2 class="featurette-heading">First featurette headling. <span class="muted">It'll blow your mind.</span></h2>
+        <h2 class="featurette-heading">About Me</h2>
         <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
       </div>
 
@@ -381,7 +369,7 @@
 
       <div class="featurette">
         <img class="featurette-image pull-left" src="./img/browser-icon-firefox.png">
-        <h2 class="featurette-heading">Oh yeah, it's that good. <span class="muted">See for yourself.</span></h2>
+        <h2 class="featurette-heading">Computer Science</h2>
         <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
       </div>
 
@@ -389,14 +377,12 @@
 
       <div class="featurette">
         <img class="featurette-image pull-left" src="./img/browser-icon-safari.png">
-        <h2 class="featurette-heading">And lastly, this one. <span class="muted">Checkmate.</span></h2>
+        <h2 class="featurette-heading">Physics</h2>
         <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
       </div>
 
       <hr class="featurette-divider">
-
       <!-- /END THE FEATURETTES -->
-
 
       <!-- FOOTER -->
       <footer>
@@ -405,8 +391,6 @@
       </footer>
 
     </div><!-- /.container -->
-
-
 
     <!-- Le javascript
     ================================================== -->
