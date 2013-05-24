@@ -23,7 +23,8 @@
       }
 
       .navbar .nav {
-        width: 84%;
+        width: 80%;
+        height: 50px;
       }
 
       /* Remove border and change up box shadow for more contrast */
@@ -37,7 +38,7 @@
 
       /* Downsize the brand/project name a bit */
       .navbar .brand {
-        width:16%;
+        width:20%;
         padding: 14px 0px 16px; /* Increase vertical padding to match navbar links */
         font-size: 16px;
         font-weight: bold;
@@ -46,12 +47,17 @@
       }
 
       .navbar .nav > li {
-        width: 20%;
+        width: 25%;
       }
 
       /* Navbar links: increase padding for taller navbar */
       .navbar .nav > li > a {
+        font-size: 18px;
         text-align: center;
+      }
+
+      .nav-border {
+        border-bottom: 2px solid #ffff00;
       }
 
       /* CUSTOMIZE THE CAROUSEL
