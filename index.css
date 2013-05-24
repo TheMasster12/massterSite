@@ -18,12 +18,12 @@
         margin-top: 20px;
         margin-bottom: -90px; /* Negative margin to pull up carousel. 90px is roughly margins and height of navbar. */
       }
+
       .navbar-wrapper .navbar {
-        /*width: 100%;*/
       }
 
       .navbar .nav {
-        /*width: 10%;*/
+        width: 84%;
       }
 
       /* Remove border and change up box shadow for more contrast */
@@ -37,11 +37,12 @@
 
       /* Downsize the brand/project name a bit */
       .navbar .brand {
-        padding: 14px 20px 16px; /* Increase vertical padding to match navbar links */
+        width:16%;
+        padding: 14px 0px 16px; /* Increase vertical padding to match navbar links */
         font-size: 16px;
         font-weight: bold;
         text-shadow: 0 -1px 0 rgba(0,0,0,.5);
-        text-decoration:underline;
+        text-align: center;
       }
 
       .navbar .nav > li {
@@ -50,13 +51,7 @@
 
       /* Navbar links: increase padding for taller navbar */
       .navbar .nav > li > a {
-        /*padding: 15px 20px;*/
-        text-decoration:underline;
-      }
-
-      /* Offset the responsive button for proper vertical alignment */
-      .navbar .btn-navbar {
-        margin-top: 10px;
+        text-align: center;
       }
 
       /* CUSTOMIZE THE CAROUSEL
