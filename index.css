@@ -2,8 +2,13 @@
 /* Author: Andrew Mass */
 
 /* Global */
+html {
+  height:100%;
+}
+
 body {
   background-color: #777777;
+  height:100%;
 }
 
 .container {
@@ -151,7 +156,7 @@ h1 {
   width:100%;
 }
 
-.slide_overview {
+.slide {
   position: relative;
   height: 100%;
   z-index: -1;
@@ -164,53 +169,4 @@ h1 {
   -webkit-box-orient: vertical;
   -webkit-box-pack: center;
   -webkit-box-align: center;
-  background-image: url('./img/bg_wash.png');
-}
-
-.slide_aboutme {
-  position: relative;
-  height: 100%;
-  z-index: -1;
-
-  display: -webkit-box;
-  -moz-background-size: cover;
-  -webkit-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  -webkit-box-orient: vertical;
-  -webkit-box-pack: center;
-  -webkit-box-align: center;
-  background-color: #777777;
-}
-
-.slide_computerscience {
-  position: relative;
-  height: 100%;
-  z-index: -1;
-
-  display: -webkit-box;
-  -moz-background-size: cover;
-  -webkit-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  -webkit-box-orient: vertical;
-  -webkit-box-pack: center;
-  -webkit-box-align: center;
-  background-color: #770077;
-}
-
-.slide_physics {
-  position: relative;
-  height: 100%;
-  z-index: -1;
-
-  display: -webkit-box;
-  -moz-background-size: cover;
-  -webkit-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  -webkit-box-orient: vertical;
-  -webkit-box-pack: center;
-  -webkit-box-align: center;
-  background-color: #337733;
 }
