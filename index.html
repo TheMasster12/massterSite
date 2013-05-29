@@ -7,168 +7,47 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <!--CSS-->
-    <link href="./css/bootstrap.css" rel="stylesheet">
-    <link href="./css/bootstrap-responsive.css" rel="stylesheet">
-    <link href="./index.css" rel="stylesheet"> 
-
-    <!--Favicon-->
-    <link rel="shortcut icon" href="./img/favicon.png">
+    <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="./index.css" rel="stylesheet">
+    <link href="./img/favicon.png" rel="shortcut icon">
   </head>
   <body>
-    <!--NAVBAR-->
-    <div class="navbar-wrapper">
-      <!--Wrap the .navbar in .container to center it within the absolutely positioned parent.-->
-      <div class="container">
 
-        <div class="navbar navbar-inverse">
-          <div class="navbar-inner">
-            <a class="brand" href="#">Andrew Mass</a>
-              <ul class="nav">
+    <!--Nav Bar-->
+    <div class="container">
+      <div class="navbar">
+        <div class="navbar-inner">
+          <a class="brand" href="#">Andrew Mass</a>
 
-                <li><a href="#aboutme"><span class="nav-border">About Me</span></a></li>
-                <li><a href="#computerscience"><span class="nav-border">Computer Science</span></a></li>
-                <li><a href="#physics"><span class="nav-border">Physics</span></a></li>
-                <li><a href="#contact"><span class="nav-border">Contact Me</span></a></li>
-                
-              </ul>
-          </div><!-- /.navbar-inner -->
-        </div><!-- /.navbar -->
+          <ul class="nav">
+            <li class="vertical-divider"></li>
+            <li><a href="#">About Me</a></li>
+            <li class="vertical-divider"></li>
+            <li><a href="#">Computer Science</a></li>
+            <li class="vertical-divider"></li>
+            <li><a href="#">Physics</a></li>
+            <li class="vertical-divider"></li>
+          </ul>
 
-      </div> <!-- /.container -->
-    </div><!-- /.navbar-wrapper -->
+          <ul class="nav pull-right">
+            <li><a href="https://plus.google.com/116104420110960728288"><img src="./img/google.png" width="32" height="32"></a></li>
+            <li><a href="https://twitter.com/TheMasster12"><img src="./img/twitter.png" width="32" height="32"></a></li>
+            <li><a href="https://www.facebook.com/andrew.mass.31"><img src="./img/facebook.png" width="32" height="32"></a></li>
 
-    <!--Carousel-->
-    <div id="myCarousel" class="carousel slide">
-      <div class="carousel-inner">
+          </ul>
 
-        <div class="item active">
-          <img src="./img/slide-01.jpg" alt="">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>About Me.</h1>
-              <p class="lead">I'm currently a full-time student studying computer science. I'm interested in numerous other fields, like physics and cosmology. I also like to play hockey.</p>
-              <a class="btn btn-large btn-primary" href="#">See More</a>
-            </div>
-          </div>
         </div>
-
-        <div class="item">
-          <img src="./img/slide-02.jpg" alt="">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>Computer Science</h1>
-              <p class="lead">Ever since I started programming with Java, I have loved to create cool things with code. Click here to see my current projects relating to computer science and more.</p>
-              <a class="btn btn-large btn-primary" href="#">See More</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="item">
-          <img src="./img/slide-03.jpg" alt="">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>Physics</h1>
-              <p class="lead">I am fascinated by the scientific processes that make the universe tick. I like to know how things work. I am especially excited when I can combine this interest with my coding interests.</p>
-              <a class="btn btn-large btn-primary" href="#">See More</a>
-            </div>
-          </div>
-        </div>
-
       </div>
-      <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-      <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
-    </div><!-- /.carousel -->
+    </div>
 
-    <!-- Marketing messaging and featurettes
-    ================================================== -->
-    <!-- Wrap the rest of the page in another container to center all the content. -->
+    <div class="container">
+      <h1>This page is obviously under heavy construction</h1>
+    </div>
 
-    <div class="container marketing">
+    <!--JQuery and Bootstrap-->
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
 
-      <!-- Three columns of text below the carousel -->
-      <div class="row">
-        <div class="span4">
-          <img class="img-circle" data-src="holder.js/140x140">
-          <h2>About Me</h2>
-          <p>I am currently a full-time student. Click here to learn more about me.</p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
-        </div><!-- /.span4 -->
-        <div class="span4">
-          <img class="img-circle" data-src="holder.js/140x140">
-          <h2>Coding</h2>
-          <p>My greatest hobby is computer science. Click here to learn more about the things I do to stay up to date with the changing technological scene.</p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
-        </div><!-- /.span4 -->
-        <div class="span4">
-          <img class="img-circle" data-src="holder.js/140x140">
-          <h2>Physics</h2>
-          <p>I am incredibly interested in all sorts of physics. Click here to see some things I am doing with this awesome subject!</p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
-        </div><!-- /.span4 -->
-      </div><!-- /.row -->
-
-
-      <!-- START THE FEATURETTES -->
-      <hr class="featurette-divider" id="aboutme">
-
-      <div class="featurette">
-        <img class="featurette-image pull-left" src="./img/browser-icon-chrome.png">
-        <h2 class="featurette-heading">About Me</h2>
-        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-      </div>
-
-      <hr class="featurette-divider" id="computerscience">
-
-      <div class="featurette">
-        <img class="featurette-image pull-left" src="./img/browser-icon-firefox.png">
-        <h2 class="featurette-heading">Computer Science</h2>
-        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-      </div>
-
-      <hr class="featurette-divider" id="physics">
-
-      <div class="featurette">
-        <img class="featurette-image pull-left" src="./img/browser-icon-safari.png">
-        <h2 class="featurette-heading">Physics</h2>
-        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-      </div>
-
-      <hr class="featurette-divider">
-      <!-- /END THE FEATURETTES -->
-
-      <!-- FOOTER -->
-      <footer>
-      <p class="pull-right" id="contact"><a href="#">Back to top</a></p>
-      <p>&copy; 2013 Andrew Mass &middot; <a href="#">Contact Me</a> &middot; <a href="#">Email Me</a></p>
-      </footer>
-
-    </div><!-- /.container -->
-
-    <!-- Le javascript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="./js/jquery.js"></script>
-    <script src="./js/bootstrap-transition.js"></script>
-    <script src="./js/bootstrap-alert.js"></script>
-    <script src="./js/bootstrap-modal.js"></script>
-    <script src="./js/bootstrap-dropdown.js"></script>
-    <script src="./js/bootstrap-scrollspy.js"></script>
-    <script src="./js/bootstrap-tab.js"></script>
-    <script src="./js/bootstrap-tooltip.js"></script>
-    <script src="./js/bootstrap-popover.js"></script>
-    <script src="./js/bootstrap-button.js"></script>
-    <script src="./js/bootstrap-collapse.js"></script>
-    <script src="./js/bootstrap-carousel.js"></script>
-    <script src="./js/bootstrap-typeahead.js"></script>
-    <script>
-      !function ($) {
-        $(function(){
-          // carousel demo
-          $('#myCarousel').carousel()
-        })
-      }(window.jQuery)
-    </script>
-    <script src="./js/holder/holder.js"></script>
   </body>
 </html>
+
