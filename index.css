@@ -38,12 +38,13 @@ body {
   color: #ffffff;
   font-size: 16px;
   text-shadow: none;
+  padding: 10px 20px 10px 20px;
 }
 
 .navbar .navbar-inner .nav li>a:hover {
   color: #ff0000;
-  border-bottom: 2px solid #ff0000;
-  margin-bottom: -2px;
+  border-bottom: 1px solid #ff0000;
+  margin-bottom: -1px;
 }
 
 .navbar .brand {
@@ -58,7 +59,7 @@ body {
   background-color:#ffffff;
   min-width:1px;
   height:30px;
-  margin: 5px 5px 0 5px;
+  margin-top: 5px;
 }
 
 .navbar .navbar-inner .social-icons {
