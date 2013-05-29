@@ -1,4 +1,5 @@
-/* ===============CSS Styles=============== */
+/* MassterSite CSS Styles */
+/* Author: Andrew Mass */
 
 /* Global */
 body {
@@ -39,7 +40,6 @@ h1 {
 
 .navbar-inner {
   border: 1px solid #ffffff;
-
   background-color: #101010; /* fallback color, place your own */
   background-image: -moz-linear-gradient(top, #323232, #101010);
   background-image: -ms-linear-gradient(top, #323232, #101010);
@@ -144,7 +144,7 @@ h1 {
   background-image: url('./img/facebook-red.png');
 }
 
-/*Slides*/
+/* Slides */
 .slideContainer {
   position: absolute;
   height:100%;
