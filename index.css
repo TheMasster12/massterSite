@@ -14,15 +14,22 @@ body {
   width:90%;
 }
 
-.container .pane {
-  position: absolute;
-  top:0;
-  bottom:0;
+.container-fluid {
+  position:absolute;
+  top:80px;
   left:5%;
   right:5%;
-  margin: 85px 0 85px 0;
-  padding:25px;
+  bottom:5%;
+  padding:0;
+}
 
+.container-fluid .pane {
+  position:absolute;
+  top:0;
+  bottom:0;
+  right:0;
+  left:0;
+  padding:25px;
   background-color: #101010; /* fallback color, place your own */
   background-image: -moz-linear-gradient(top, #323232, #101010);
   background-image: -ms-linear-gradient(top, #323232, #101010);
@@ -34,8 +41,23 @@ body {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#323232', endColorstr='#101010', GradientType=0);
 }
 
+.container-fluid .pane.row-fluid {
+  width:auto;
+}
+
+.container-fluid .pane .content-wrap {
+  height:100%;
+  padding:25px;
+}
+
 h1 {
-  color:#ffffff;
+  text-align:center;
+  color:#000;
+}
+
+h3 {
+  text-align:center;
+  color:#FFF;
 }
 
 /* Nav Bar */
@@ -173,4 +195,12 @@ h1 {
   -webkit-box-orient: vertical;
   -webkit-box-pack: center;
   -webkit-box-align: center;
+}
+
+.bx-wrapper .bx-viewport {
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: none;
+  background: none;
 }
