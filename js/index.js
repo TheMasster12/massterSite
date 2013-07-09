@@ -7,7 +7,7 @@ $(document).ready(function() {
     });
 
     var projectSlider = $("#project-slider").bxSlider({
-        controls: true,
+        controls: false,
         pager: false,
         slideWidth: 256,
         auto: true,
