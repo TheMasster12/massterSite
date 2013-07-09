@@ -1,6 +1,8 @@
 /* MassterSite LESS Styles */
 
 /* Author: Andrew Mass */
+@min-slide-height: 600px;
+
  html {
     height:100%;
     body {
@@ -10,25 +12,29 @@
             top:80px;
             left:5%;
             right:5%;
-            bottom:5%;
+            bottom:20px;
+            min-height: @min-slide-height;
             padding:0;
             .pane {
                 position:absolute;
+                
                 top:0;
-                bottom:0;
+                bottom: 0;
+               // min-height: 500px;
+                margin: auto 0;
                 right:0;
                 left:0;
                 padding:25px;
-                background-color: #101010;
+                background-color: #282828;
                 /* fallback color, place your own */
-                background-image: -moz-linear-gradient(top, #323232, #101010);
-                background-image: -ms-linear-gradient(top, #323232, #101010);
-                background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#323232), to(#101010));
-                background-image: -webkit-linear-gradient(top, #323232, #101010);
-                background-image: -o-linear-gradient(top, #323232, #101010);
-                background-image: linear-gradient(top, #323232, #101010);
-                background-repeat: repeat-x;
-                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#323232', endColorstr='#101010', GradientType=0);
+                //background-image: -moz-linear-gradient(top, #323232, #101010);
+                //background-image: -ms-linear-gradient(top, #323232, #101010);
+                //background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#323232), to(#101010));
+                //background-image: -webkit-linear-gradient(top, #323232, #101010);
+                //background-image: -o-linear-gradient(top, #323232, #101010);
+                //background-image: linear-gradient(top, #323232, #101010);
+                //background-repeat: repeat-x;
+                //filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#323232', endColorstr='#101010', GradientType=0);
                 .row-fluid {
                     width:auto;
                 }
@@ -144,6 +150,7 @@
             height:100%;
             width:100%;
             .slide {
+                min-height: @min-slide-height + 100px;
                 position: relative;
                 height: 100%;
                 z-index: -1;
@@ -163,6 +170,20 @@
             box-shadow: none;
             border: none;
             background: none;
+        }
+        /*CS-Page Specific Styles */
+        .skills-matrix {
+            color:#FFF;
+            text-align: center;
+            span.small {
+                font-size: 15px;
+            }
+            span.med {
+                font-size: 20px;
+            }
+            span.large {
+                font-size: 25px;
+            }
         }
     }
 }
