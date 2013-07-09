@@ -1,5 +1,5 @@
 {
-  "name": "SportsZone101",
+  "name": "massterSite",
   "version": "0.1.0",
   "devDependencies": {
     "grunt": "~0.4.1",
@@ -8,9 +8,6 @@
     "grunt-contrib-copy": "~0.4.1",
     "grunt-contrib-clean": "~0.4.0",
     "grunt-contrib-less": "~0.5.1",
-    "grunt-contrib-concat": "~0.3.0",
-    "dust": "~0.3.0",
-    "dustjs-linkedin": "~1.2.5",
-    "grunt-dust-html": "~0.1.2"
+    "grunt-contrib-concat": "~0.3.0"
   }
 }
