@@ -9,9 +9,10 @@ $(document).ready(function() {
     var projectSlider = $("#project-slider").bxSlider({
         controls: false,
         pager: false,
-        slideWidth: 256,
+        slideWidth: 200,
         auto: true,
-        pause: 2000
+        pause: 2000,
+        captions: true
     });
 
     $(".bx-next").css("right", "-25px");
