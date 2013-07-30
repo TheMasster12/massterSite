@@ -1,0 +1,272 @@
+body {
+  background-image: url('../img/pixel-bg-test.png');
+  background-attachment: fixed;
+}
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 14px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: darken(@gsBlue, 20%);
+  border-right: 5px solid @black;
+}
+
+code {
+  color: inherit;
+  background-color: transparent;
+  font-size: inherit;
+  border: none;
+  font-family: 'Inconsolata', 'Consolas', 'Courier New', monospace;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.navbar {
+  .nav {
+    height: @navbarHeight;
+    li {
+      .transition(0.3s all);
+      border-bottom: 1px solid @black;
+      &:hover, &.active {
+        border-bottom: 2px solid @gsBlue;
+      }
+      a {
+        .transition(0.3s all);
+        font-size: 24px;
+        font-family: 'Oswald', @sansFontFamily;
+      }
+    }
+    &.pull-right {
+      li {
+        border: none !important;
+      }
+    }
+  }
+}
+
+.container {
+  &:not(:last-child) {
+    border-bottom: 2px solid darken(@gsBlue, 20%);
+  }
+}
+
+.container-content {
+  padding: @navbarHeight 0;
+  h1 {
+    color: @gsBlue;
+    margin-bottom: @navbarHeight;
+  }
+  > h2 {
+    margin: 50px 0;
+  }
+}
+
+
+.cards-projects {
+  margin-bottom: 30px;
+  .flipcard {
+    height: 350px;
+    border: 5px solid transparent;
+    .text-center;
+    .img-project {
+      height: 230px;
+      width: 230px;
+    }
+    .front h2 {
+      position: absolute;
+      bottom: 20px;
+      left: 0;
+      right: 0;
+    }
+    .back h2 {
+      a {
+        color: @headingsColor;
+        &:hover {
+          color: @gsBlue;
+        }
+      }
+    }
+  }
+}
+
+.cards-team {
+  .flipcard {
+    height: 270px;
+    border: 5px solid transparent;
+    .text-center;
+    .img-team {
+      border: 4px solid @grayDark;
+      height: 180px;
+      width: 180px;
+    }
+    .social-team {
+      i {
+        margin: 0 10px;
+      }
+    }
+    .front h2 {
+      position: absolute;
+      bottom: 20px;
+      left: 0;
+      right: 0;
+    }
+    a {
+      color: @headingsColor;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+  #matt-voska {
+    .img-team {
+      border: 1px solid @gsBlue;
+    }
+    a:hover {
+      color: @gsBlue;
+    }
+  }
+  #aakash-patel {
+    .img-team {
+      border: 1px solid @green;
+    }
+    a:hover {
+      color: @green;
+    }
+  }
+  #andrew-mass {
+    .img-team {
+      border: 1px solid @errorText;
+    }
+    a:hover {
+      color: @errorText;
+    }
+  }
+}
+
+.flipcard {
+  position: relative;
+  .perspective(500px);
+  .front, .back {
+    padding: 10px;
+    position: absolute;
+    background-color: @grayDarker;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    .transform-style(preserve-3d);
+    .transition(0.3s all);
+    .backface-visibility(hidden);
+  }
+  .front {
+    z-index: 900;
+    .transform(rotateY(0deg) translateZ(0px));
+  }
+  .back {
+    z-index: 800;
+    .transform(rotateY(-180deg));
+  }
+}
+
+.flipcard:hover {
+  .front {
+    z-index: 800;
+    .transform(rotateY(180deg));
+  }
+  .back {
+    z-index: 900;
+    .transform(rotateY(0deg) translateZ(0px));
+  }
+}
+
+.social-facebook:hover > a {
+  color: #3b5998 !important;
+  text-decoration: none;
+}
+
+.social-gplus:hover > a {
+  color: #d34836 !important;
+  text-decoration: none;
+}
+
+.social-github:hover > a {
+  color: #0088cc !important;
+  text-decoration: none;
+}
+
+.social-linkedin:hover > a {
+  color: #005696 !important;
+  text-decoration: none;
+}
+
+.social-twitter:hover > a {
+  color: #00aced !important;
+  text-decoration: none;
+}
+
+.btn-action {
+  background-color: @gsBlue;
+  color: @white;
+  border: none;
+  .box-shadow(none);
+  padding: 10px 30px;
+  .transition(.2s all);
+  &:hover {
+    background-color: darken(@gsBlue, 25%);
+  }
+}
+
+#home {
+  text-align: center;
+  padding-top: @navbarHeight + 20px;
+  padding-bottom: 50px;
+  .row-fluid {
+    margin-top: 30px;
+    height: 320px;
+    .span6 {
+      padding: 10px;
+      height: 100%;
+      position: relative;
+      &:first-child {
+        border-right: 2px solid #444;
+        padding-right: 50px;
+      }
+      &:last-child {
+        .btn-panel {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          .transform(translate(-50%, -50%));
+          a {
+            display: block;
+            width: 300px;
+            margin: 40px auto;
+            .text-center;
+          }
+        }
+      }
+    }
+  }
+}
+
+#contact {
+  td {
+    padding-right: 30px;
+  }
+  padding-bottom: 50px;
+}
+
+#footer {
+  background-color: @grayDarker;
+  padding: 8px 0;
+  position: static;
+  bottom: 0;
+  width: 100%;
+  p {
+    margin: 0;
+  }
+}
