@@ -31,5 +31,15 @@ $(function() {
 
   $(window).resize(function() {
     MassterSite.resize();
-  });  
+  });
+
+  $('.start .panel').click(function() {
+    $('.start').css('display','none');
+    $('.content').css('display', 'block');
+  });
+
+  $('.content .side-nav-image').click(function() {
+    $('.content').css('display','none');
+    $('.start').css('display', 'block');
+  });
 });
