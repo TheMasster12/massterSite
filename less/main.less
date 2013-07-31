@@ -5,21 +5,19 @@ body.start {
   width: 100%;
 
   .wrapper {
-    position: absolute;
-    top: 0;
-    bottom: 36px;
-    left: 0;
-    right: 0;
+    height: 100%;
+    min-height: 500px;
+    margin-top: -30px;
     font-size: 0;
     text-align: center;
 
     .centered {
-      min-height: 277px;
-      max-width: 75%;
+      max-width: 900px;
       display: inline-block;
       vertical-align: middle;
 
-      h1 {
+      #header-name {
+        .transition(.5s all);
         text-align: center;
         font-size: 100pt;
       }
@@ -48,11 +46,33 @@ body.start {
 #footer {
   background-color: @grayDarker;
   color: @grayLight;
-  padding: 8px 0;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
   p {
     margin: 0;
+    padding: 5px 0;
   }
+}
+
+@media only screen and (max-width: 1217px) {
+   .start .container.wrapper .centered #header-name {
+    font-size: 80pt;
+   }
+}
+
+@media only screen and (max-width: 1009px) {
+   .start .container.wrapper .centered #header-name {
+    font-size: 60pt;
+   }
+}
+
+@media only screen and (max-width: 660px) {
+   .start .container.wrapper .centered #header-name {
+    font-size: 40pt;
+   }
+}
+
+@media only screen and (max-width: 440px) {
+
+   .start .container.wrapper .centered #header-name {
+    font-size: 20pt;
+   }
 }
