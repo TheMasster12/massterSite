@@ -1,6 +1,13 @@
+/*
+  Stylesheet - Main
+  Author - Andrew Mass
+  8/1/2013
+*/
+
 body {
   position: relative;
   font-family: @headingsFontFamily;
+
   h1,h2,h3,h4,h5,h6,p {
     font-family: @headingsFontFamily;
   }
@@ -42,110 +49,116 @@ body {
           &:hover {
             border-color: #F00;
           }
-        }
-      }
+        } // .panel
+      } // .centered
+
       &:before {
         content: '';
         display: inline-block;
         height: 100%;
         vertical-align: middle;
       }
-    }
-  }
-}
+    } // .wrapper
+  } // .start
 
-.content {
-  display: none;
+  .content {
+    display: none;
 
-  .side-nav {
-    background-color: @grayDark;
+    .side-nav {
+      background-color: @grayDark;
 
-    .side-nav-image {
-      margin: 15px 0;
-      margin-left: 15px;
-      cursor: pointer;
+      .side-nav-image {
+        margin: 15px 0;
+        margin-left: 15px;
+        cursor: pointer;
 
-      img {
-        width: 100%;
-        border:2px solid @grayDark;
-        -webkit-border-radius: 20px;
-        -moz-border-radius: 20px;
-        border-radius: 20px; 
-
-        &:hover {
-        border: 2px solid @accent;
-        } 
-      }
-    }
-
-    .list-group {
-      margin-left: 15px;
-
-      .list-group-item {
-        background-color: @grayDark;
-        border: 0;
-        border-bottom: 2px solid @accent;
-
-        a {
-          color: @grayLight;
-          font-family: @headingsFontFamily;
-          font-size: 24px;
+        img {
+          width: 100%;
+          border:2px solid @grayDark;
+          -webkit-border-radius: 20px;
+          -moz-border-radius: 20px;
+          border-radius: 20px; 
 
           &:hover {
-            color: @accent;
-            text-decoration: none;
-          }
+          border: 2px solid @accent;
+          } 
         }
-      }
-    }
+      } // .side-nav-image
 
-    .social-icon-list {
-      list-style: none;
-      padding: 10px 0 0 0;
-      margin-left: 15px;
-      text-align: center;
-      border-top: 1px solid @accent;
-
-      .social-icon {
-        display: inline-block;
-
-        a {
-          font-size: 15pt;
-          color: @grayLight;
-
-          &:hover {
-            color: @accent;
-            text-decoration: none;
-          }
-        }
-      }
-    }
-  }
-
-  .content-pane {
-
-    .wrapper {
-      margin-left: 2%;
-      margin-right: 3%;
-
-      .section-header {
-        color: @grayDark;
-        h1 {
-          margin-left: 25px;
-          font-family: @headingsFontFamily;
-        }
-        hr {
-          border: 1px solid @accent;
-        }
-      }
-    }
-
-    #development {
-      .container {
+      .social-icon-list {
+        list-style: none;
+        padding: 10px 0 0 0;
+        margin-left: 15px;
         text-align: center;
+        border-top: 1px solid @accent;
 
-        .row {
+        .social-icon {
+          display: inline;
+
           a {
+            color: @grayLight;
+
+            i {
+              font-size: 30pt;
+              padding: 0 2px 0 2px;
+            }
+
+            &:hover {
+              color: @accent;
+              text-decoration: none;
+            }
+          }
+        } // .social-icon
+      } // .social-icon-list
+
+      .list-group {
+        margin-left: 15px;
+
+        .list-group-item {
+          background-color: @grayDark;
+          border: 0;
+          border-bottom: 2px solid @accent;
+          font-size: 24px;
+          cursor: pointer;
+
+          a {
+            color: @grayLight;
+          }
+
+          &:hover {
+            a {
+              color: @accent;
+              text-decoration: none;
+            }
+          }
+        } // .list-group-item
+      } // .list-group
+    } // .side-nav
+
+    .content-pane {
+
+      .wrapper {
+        margin-bottom: 30px;
+
+        .section-header {
+          color: @grayDark;
+
+          h1 {
+            margin-left: 25px;
+            font-family: @headingsFontFamily;
+          }
+
+          hr {
+            border: 1px solid @accent;
+          }
+        } // .section-header
+      } // .wrapper
+
+      #development {
+        .container {
+          text-align: center;
+
+          .row {
 
             i {
               font-size: 150pt;
@@ -153,60 +166,56 @@ body {
               color: @accent;
 
               &:hover {
-                //background-color: #F5F5F5;
                 text-decoration: none;
                 color: @grayDark;
               }
             }
-          }
-        }
-      }
+          } // .row
+        } // .container
 
-      #gigastorm-logo {
-        &:hover {
+        #gigastorm-logo:hover {
           background-color: #F5F5F5;
         }
-      }
+      } // #development
+    } // .content-pane
+  } // .content
+
+  #footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: @grayDark;
+    color: @grayLight;
+    z-index: 10;
+    text-align: right;
+
+    p {
+      margin: 0 10px;
+      padding: 5px 0;
     }
+  } // #footer
+
+  @media only screen and (max-width: 1217px) {
+     .start .container.wrapper .centered #header-name {
+        font-size: 80pt;
+     }
   }
 
-}
-
-#footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  background-color: @grayDark;
-  color: @grayLight;
-  z-index: 10;
-  text-align: right;
-  p {
-    margin: 0 10px;
-    padding: 5px 0;
+  @media only screen and (max-width: 1009px) {
+     .start .container.wrapper .centered #header-name {
+        font-size: 60pt;
+     }
   }
-}
 
-@media only screen and (max-width: 1217px) {
-   .start .container.wrapper .centered #header-name {
-    font-size: 80pt;
-   }
-}
+  @media only screen and (max-width: 660px) {
+     .start .container.wrapper .centered #header-name {
+        font-size: 40pt;
+     }
+  }
 
-@media only screen and (max-width: 1009px) {
-   .start .container.wrapper .centered #header-name {
-    font-size: 60pt;
-   }
-}
-
-@media only screen and (max-width: 660px) {
-   .start .container.wrapper .centered #header-name {
-    font-size: 40pt;
-   }
-}
-
-@media only screen and (max-width: 440px) {
-
-   .start .container.wrapper .centered #header-name {
-    font-size: 20pt;
-   }
-}
+  @media only screen and (max-width: 440px) {
+     .start .container.wrapper .centered #header-name {
+        font-size: 20pt;
+     }
+  }
+} // .body

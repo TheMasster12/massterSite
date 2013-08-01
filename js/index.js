@@ -1,33 +1,47 @@
+/*
+  Javascript - Index
+  Author - Andrew Mass
+  8/1/2013
+*/
+
 function MassterSite() {}
 
+//Sets correct heights for various elements based on window height
 MassterSite.resize = function() {
   var height = $(window).height();
+  var MAX_HEIGHT = 500;
   console.log($('.start').css('display'));
 
   if($('.start').css('display') != 'none') {
+    //Showing start page
     if($('.centered').height() >= height) {
+      //Window height too small to display content
       $('.start').css('height','');
       $('.start').css('min-height', height);
     } else {
-        $('.start').css('min-height','');
-      if(height >= 500) {
+      //Window height larger than content height
+      $('.start').css('min-height','');
+      if(height >= MAX_HEIGHT) {
         $('.start').css('height', height);
       } else {
-        $('.start').css('height', 500);
+        $('.start').css('height', MAX_HEIGHT);
       }
     }
     
-    if(height >= 500) {
+    if(height >= MAX_HEIGHT) {
+      //Window height larger than content height
       $('body').css('min-height', height);
       $('.container.wrapper').css('min-height',height);
       $('.container.wrapper:before').css('min-height', height);
     } else {
-      $('body').css('min-height', 500);
-      $('.container.wrapper').css('min-height', 500);
-      $('.container.wrapper:before').css('min-height', 500);
+      //Window height too small to display content
+      $('body').css('min-height', MAX_HEIGHT);
+      $('.container.wrapper').css('min-height', MAX_HEIGHT);
+      $('.container.wrapper:before').css('min-height', MAX_HEIGHT);
     }
   } else if($('.content').css('display') != 'none') {
-      $('.side-nav').css('height',$('.content').height() - 30);
+      //Showing content page
+      $('.side-nav').css('height',$('.content').height());
   }
 };
 
@@ -38,18 +52,21 @@ $(function() {
     MassterSite.resize();
   });
 
+  //Click handler for start page panels
   $('.start .panel').click(function() {
     $('.start').css('display','none');
     $('.content').css('display', 'block');
     MassterSite.resize();
   });
 
+  //Click handler for sidebar navigation image
   $('.content .side-nav-image').click(function() {
     $('.content').css('display','none');
     $('.start').css('display', 'block');
     MassterSite.resize();
   });
 
+  //Carousel initilization
   $('#carousel-projects').carousel({
     interval: 2000
   });
