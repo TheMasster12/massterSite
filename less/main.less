@@ -1,5 +1,9 @@
 body {
   position: relative;
+  font-family: @headingsFontFamily;
+  h1,h2,h3,h4,h5,h6,p {
+    font-family: @headingsFontFamily;
+  }
 
   .start {
     min-height: 100%;
@@ -109,7 +113,34 @@ body {
           font-family: @headingsFontFamily;
         }
         hr {
-          border: 1px solid @grayDark;
+          border: 1px solid @accent;
+        }
+      }
+    }
+
+    #development {
+      .container {
+        text-align: center;
+
+        .row {
+          a {
+
+            i {
+              font-size: 150pt;
+              color: @accent;
+
+              &:hover {
+                background-color: #F5F5F5;
+                text-decoration: none;
+              }
+            }
+          }
+        }
+      }
+
+      #gigastorm-logo {
+        &:hover {
+          background-color: #F5F5F5;
         }
       }
     }

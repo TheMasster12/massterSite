@@ -2,6 +2,7 @@ function MassterSite() {}
 
 MassterSite.resize = function() {
   var height = $(window).height();
+  console.log($('.start').css('display'));
 
   if($('.start').css('display') != 'none') {
     if($('.centered').height() >= height) {
@@ -26,7 +27,7 @@ MassterSite.resize = function() {
       $('.container.wrapper:before').css('min-height', 500);
     }
   } else if($('.content').css('display') != 'none') {
-      $('.sidebar-nav').css('height',height);
+      $('.side-nav').css('height',$('.content').height() - 30);
   }
 };
 
@@ -40,10 +41,16 @@ $(function() {
   $('.start .panel').click(function() {
     $('.start').css('display','none');
     $('.content').css('display', 'block');
+    MassterSite.resize();
   });
 
   $('.content .side-nav-image').click(function() {
     $('.content').css('display','none');
     $('.start').css('display', 'block');
+    MassterSite.resize();
+  });
+
+  $('#carousel-projects').carousel({
+    interval: 2000
   });
 });
