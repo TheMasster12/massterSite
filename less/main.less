@@ -98,6 +98,28 @@ body {
         }
       }
     }
+
+    .social-icon-list {
+      list-style: none;
+      padding: 10px 0 0 0;
+      margin-left: 15px;
+      text-align: center;
+      border-top: 1px solid @accent;
+
+      .social-icon {
+        display: inline-block;
+
+        a {
+          font-size: 15pt;
+          color: @grayLight;
+
+          &:hover {
+            color: @accent;
+            text-decoration: none;
+          }
+        }
+      }
+    }
   }
 
   .content-pane {
@@ -127,11 +149,13 @@ body {
 
             i {
               font-size: 150pt;
+              line-height: 1;
               color: @accent;
 
               &:hover {
-                background-color: #F5F5F5;
+                //background-color: #F5F5F5;
                 text-decoration: none;
+                color: @grayDark;
               }
             }
           }
