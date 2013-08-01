@@ -1,8 +1,8 @@
-/*
-  Stylesheet - Main
-  Author - Andrew Mass
-  8/1/2013
-*/
+/**
+ * Stylesheet - Main
+ * Author - Andrew Mass
+ * 8/1/2013
+ */
 
 body {
   position: relative;
@@ -142,14 +142,16 @@ body {
 
         .section-header {
           color: @grayDark;
+          background: url('../img/bg-section-header.png') repeat;
+          border-bottom: 1px solid @accent;
+          margin: 20px 0;
 
-          h1 {
-            margin-left: 25px;
-            font-family: @headingsFontFamily;
-          }
-
-          hr {
-            border: 1px solid @accent;
+          .header-wrapper {
+            text-align: center;
+            width: 210px;
+            background-color: #FFF;
+            border: 2px solid #FFF;
+            font-size: 38px;
           }
         } // .section-header
       } // .wrapper
