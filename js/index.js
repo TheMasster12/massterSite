@@ -41,7 +41,15 @@ MassterSite.resize = function() {
     }
   } else if($('.content').css('display') != 'none') {
       // Showing content page.
-      $('.side-nav').css('height',$('.content').height());
+      if($(window).width() >= 980) {
+        $('.side-nav').css('height',$('.content-pane').height());
+        //$('.side-nav-inner').addClass('affix');
+        //$('.side-nav-inner').attr('data-spy','affix');
+      } else {
+        $('.side-nav').css('height','');
+        //$('.side-nav-inner').removeClass('affix');
+        //$('.side-nav-inner').attr('data-spy','');
+      }
   }
 };
 

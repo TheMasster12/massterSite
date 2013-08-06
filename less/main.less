@@ -4,6 +4,17 @@
  * 8/1/2013
  */
 
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: @grayDark;
+  border: 2px solid @accent;
+  border-right: 2px solid #000;
+}
+
 body {
   position: relative;
   font-family: @headingsFontFamily;
@@ -22,7 +33,6 @@ body {
       text-align: center;
 
       .centered {
-        //width: 900px;
         display: inline-block;
         vertical-align: middle;
         margin-bottom: 30px;
@@ -92,12 +102,14 @@ body {
       background-color: @grayDark;
 
       .side-nav-image {
-        margin: 15px 0;
         margin-left: 15px;
         cursor: pointer;
+        text-align: center;
 
         img {
+          margin: 15px 0;
           width: 100%;
+          max-width: 200px;
           border:2px solid @grayDark;
           -webkit-border-radius: 20px;
           -moz-border-radius: 20px;
@@ -111,8 +123,8 @@ body {
 
       .social-icon-list {
         list-style: none;
-        padding: 10px 0 0 0;
-        margin-left: 15px;
+        padding: 0;
+        margin: 0 0 0 15px;
         text-align: center;
         border-top: 1px solid @accent;
 
@@ -124,7 +136,7 @@ body {
 
             i {
               font-size: 30pt;
-              padding: 0 2px 0 2px;
+              padding: 0 5px 0 5px;
             }
 
             &:hover {
@@ -144,6 +156,15 @@ body {
           border-bottom: 2px solid @accent;
           font-size: 24px;
           cursor: pointer;
+          border-radius: 0;
+
+          &.first{
+            border-top: 1px solid @accent;
+          }
+
+          &.last{
+            border-bottom: 1px solid @accent;
+          }
 
           a {
             color: @grayLight;
@@ -189,11 +210,11 @@ body {
             i {
               font-size: 150pt;
               line-height: 1;
-              color: @accent;
+              color: @grayDark;
 
               &:hover {
                 text-decoration: none;
-                color: @grayDark;
+                color: @accent;
               }
             }
           } // .row
@@ -218,6 +239,10 @@ body {
     p {
       margin: 0 10px;
       padding: 5px 0;
+
+      a {
+        color: @accent;
+      }
     }
   } // #footer
 
