@@ -16,9 +16,7 @@ module.exports = (grunt) ->
         separator: ';'
       all:
         src:
-          [ "js/jquery.min.js"
-            "js/jquery-ui.min.js"
-            "js/bootstrap.min.js"
+          [ "js/bootstrap.min.js"
             "js/index.js"
           ]
         dest:
