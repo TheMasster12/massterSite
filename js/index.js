@@ -27,7 +27,7 @@ MassterSite.resize = function() {
         $('.start').css('height', MAX_HEIGHT);
       }
     }
-    
+
     if(height >= MAX_HEIGHT) {
       // Window height larger than content height.
       $('body').css('min-height', height);
