@@ -9,7 +9,7 @@ module.exports = (grunt) ->
           yuicompress: true
           compress: true
         files:
-          'prod/style.css': 'less/style.less'
+          'dist/style.css': 'less/style.less'
 
     concat:
       options:
@@ -20,12 +20,12 @@ module.exports = (grunt) ->
             "js/index.js"
           ]
         dest:
-          "prod/all.js"
+          "dist/all.js"
 
     uglify:
       all:
         files:
-          "prod/all.min.js": "prod/all.js"
+          "dist/all.min.js": "dist/all.js"
 
     htmlmin:
       all:
@@ -33,16 +33,16 @@ module.exports = (grunt) ->
           removeComments: true,
           collapseWhitespace: true
         files:
-          "prod/index.html": "index.html"
+          "dist/index.html": "index.html"
 
     copy:
       all:
-        files: [{expand: true, src: ['img/*'], dest: 'prod/', filter: 'isFile'},
-                {expand: true, src: ['font/*'], dest: 'prod/', filter: 'isFile'}]
+        files: [{expand: true, src: ['img/*'], dest: 'dist/', filter: 'isFile'},
+                {expand: true, src: ['font/*'], dest: 'dist/', filter: 'isFile'}]
 
     clean:
-      js: ["prod/all.js"]
-      res: ["prod/font", "prod/img"]
+      js: ["dist/all.js"]
+      res: ["dist/font", "dist/img"]
 
     watch:
       less:

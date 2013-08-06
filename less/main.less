@@ -111,12 +111,10 @@ body {
           width: 100%;
           max-width: 200px;
           border:2px solid @grayDark;
-          -webkit-border-radius: 20px;
-          -moz-border-radius: 20px;
           border-radius: 20px;
 
           &:hover {
-          border: 2px solid @accent;
+            border: 2px solid @accent;
           }
         }
       } // .side-nav-image
@@ -158,11 +156,11 @@ body {
           cursor: pointer;
           border-radius: 0;
 
-          &.first{
+          &:first-child {
             border-top: 1px solid @accent;
           }
 
-          &.last{
+          &:last-child {
             border-bottom: 1px solid @accent;
           }
 
