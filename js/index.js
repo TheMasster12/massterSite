@@ -10,7 +10,6 @@ function MassterSite() {}
 MassterSite.resize = function() {
   var height = $(window).height();
   var MAX_HEIGHT = 500;
-  console.log($('.start').css('display'));
 
   if($('.start').css('display') != 'none') {
     // Showing start page.
