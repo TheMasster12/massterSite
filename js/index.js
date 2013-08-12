@@ -53,9 +53,21 @@ MassterSite.resize = function() {
 };
 
 $(function() {
+  if(window.location.hash !== "") {
+    $('.start').css('display','none');
+    $('.content').css('display', 'block');
+  }
   MassterSite.resize();
 
   $(window).resize(function() {
+    MassterSite.resize();
+  });
+
+  // Click handler for start page header.
+  $('#header-name').click(function(event) {
+    event.preventDefault();
+    $('.start').css('display','none');
+    $('.content').css('display', 'block');
     MassterSite.resize();
   });
 
@@ -67,7 +79,9 @@ $(function() {
   });
 
   // Click handler for sidebar navigation image.
-  $('.content .side-nav-image').click(function() {
+  $('.content .side-nav-image').click(function(event) {
+    event.preventDefault();
+    window.location.hash = "";
     $('.content').css('display','none');
     $('.start').css('display', 'block');
     MassterSite.resize();
@@ -75,6 +89,6 @@ $(function() {
 
   // Carousel initilization.
   $('#carousel-projects').carousel({
-    interval: 2000
+    interval: 3141.5
   });
 });
