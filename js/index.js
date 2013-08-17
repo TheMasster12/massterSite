@@ -10,6 +10,7 @@ function MassterSite() {}
 MassterSite.resize = function() {
   var height = $(window).height();
   var MAX_HEIGHT = 500;
+  var SCREEN_DESKTOP = 992;
 
   if($('.start').css('display') != 'none') {
     // Showing start page.
@@ -40,7 +41,7 @@ MassterSite.resize = function() {
     }
   } else if($('.content').css('display') != 'none') {
       // Showing content page.
-      if($(window).width() >= 980) {
+      if(self.innerWidth >= SCREEN_DESKTOP) {
         $('.side-nav').css('height',$('.content-pane').height());
         //$('.side-nav-inner').addClass('affix');
         //$('.side-nav-inner').attr('data-spy','affix');
@@ -57,7 +58,6 @@ $(function() {
     $('.start').css('display','none');
     $('.content').css('display', 'block');
   }
-  MassterSite.resize();
 
   $(window).resize(function() {
     MassterSite.resize();
@@ -66,6 +66,7 @@ $(function() {
   // Click handler for start page header.
   $('#header-name').click(function(event) {
     event.preventDefault();
+    window.location.hash = "content";
     $('.start').css('display','none');
     $('.content').css('display', 'block');
     MassterSite.resize();
@@ -91,4 +92,6 @@ $(function() {
   $('#carousel-projects').carousel({
     interval: 3141.5
   });
+
+  MassterSite.resize();
 });
