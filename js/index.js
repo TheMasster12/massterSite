@@ -42,13 +42,9 @@ MassterSite.resize = function() {
   } else if($('.content').css('display') != 'none') {
       // Showing content page.
       if(self.innerWidth >= SCREEN_DESKTOP) {
-        $('.side-nav').css('height',$('.content-pane').height());
-        //$('.side-nav-inner').addClass('affix');
-        //$('.side-nav-inner').attr('data-spy','affix');
+        $('.side-nav').css('height',$('.content-pane').outerHeight());
       } else {
         $('.side-nav').css('height','');
-        //$('.side-nav-inner').removeClass('affix');
-        //$('.side-nav-inner').attr('data-spy','');
       }
   }
 };

@@ -17,6 +17,10 @@ body {
   .border-right {
     border-right: 1px solid @borderColor !important;
   }
+
+  .border-left {
+    border-left: 1px solid @borderColor !important;
+  }
 }
 
 @media only screen and (min-width: @screen-desktop) {
@@ -136,6 +140,10 @@ legend {
 
 .border-right {
   border-right: none;
+}
+
+.border-left {
+  border-left: none;
 }
 
 #content #header-name {
@@ -342,6 +350,20 @@ legend {
   }
 } // #development
 
+#physics {
+  .panel {
+    text-align: left;
+
+    ul {
+      padding-left: 25px;
+
+      a {
+        display: block;
+      }
+    }
+  }
+} // #physics
+
 #footer {
   position: absolute;
   bottom: 0;
@@ -355,9 +377,5 @@ legend {
   small {
     margin: 0 10px;
     font-family: @headings-font-family;
-
-    a {
-      color: @accent;
-    }
   }
 } // #footer
