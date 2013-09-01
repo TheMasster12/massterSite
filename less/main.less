@@ -61,11 +61,15 @@ body {
   }
 
   .list-group .list-group-item {
-    font-size: 36px !important;
+    font-size: 32px !important;
   }
 
   .social-icon a i {
     font-size: 50px !important;
+  }
+
+  .side-nav-image img {
+    max-width: 250px !important;
   }
 }
 
@@ -256,6 +260,7 @@ legend {
         margin: 0;
         text-align: center;
         border-top: 1px solid @accent;
+        border-bottom: 1px solid @accent;
 
         .social-icon {
           display: inline;
@@ -281,38 +286,34 @@ legend {
       .list-group {
         text-align: center;
 
-        .list-group-item {
-          background-color: @grayDark;
-          border: 0;
-          border-bottom: 2px solid @accent;
-          font-size: 50px;
-          cursor: pointer;
-          border-radius: 0;
-
-          &:first-child {
-            border-top: 1px solid @accent;
-          }
-
-          &:last-child {
-            border-bottom: 1px solid @accent;
-          }
-
           a {
-            .transition(@transition-time all);
             color: @grayLight;
-          }
 
-          &:hover {
+            .list-group-item {
+              .transition(@transition-time all);
+              background-color: @grayDark;
+              border: 0;
+              border-bottom: 1px solid @accent;
+              font-size: 50px;
+              cursor: pointer;
+              border-radius: 0;
 
-            a {
-              color: @accent;
-            }
-          }
-        } // .list-group-item
+              &:hover {
+                color: @accent;
+              }
+            } // .list-group-item
+        } // a
       } // .list-group
     } // .side-nav
   } // #row-content
 } // .content
+
+#about-me {
+
+  i {
+    font-size: 150px;
+  }
+}
 
 #development {
 
@@ -355,12 +356,13 @@ legend {
   .panel {
     text-align: left;
 
-    ul {
-      padding-left: 25px;
+    legend {
+      margin-bottom: 10px;
+    }
 
-      a {
-        display: block;
-      }
+    ul {
+      list-style: none;
+      padding-left: 25px;
     }
   }
 } // #physics
