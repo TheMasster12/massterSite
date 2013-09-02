@@ -28,6 +28,10 @@ body {
     font-size: 120px;
   }
 
+  #email-link {
+    font-size: 16px !important;   
+  }
+
   .list-group {
     text-align: left !important;
 
@@ -45,6 +49,10 @@ body {
   #header-name {
     font-size: 150px;
   }
+  
+  #email-link {
+    font-size: 18px !important;   
+  }
 
   .list-group .list-group-item {
     font-size: 24px !important;
@@ -58,6 +66,10 @@ body {
 @media only screen and (min-width: 1600px) {
   #header-name {
     font-size: 180px;
+  }
+
+  #email-link {
+    font-size: 24px !important;
   }
 
   .list-group .list-group-item {
@@ -84,6 +96,7 @@ body {
 
 .row {
   text-align: center;
+  margin-right: 0;
 }
 
 .wrapper {
@@ -237,6 +250,7 @@ legend {
       padding-right: 0;
 
       .side-nav-image {
+        .transition(0.01s all);
         cursor: pointer;
         text-align: center;
 
@@ -253,6 +267,22 @@ legend {
           }
         }
       } // .side-nav-image
+
+      #email-link {
+        text-align: center;
+        border-top: 1px solid @accent;
+        padding: 10px 0;
+        font-size: 40px;
+
+        a {
+          .transition(@transition-time all);
+          color: @grayLight;
+         
+          &:hover {
+            color: @accent; 
+          }
+        }
+      }
 
       .social-icon-list {
         list-style: none;
@@ -366,6 +396,13 @@ legend {
     }
   }
 } // #physics
+
+#more {
+
+  i {
+    font-size: 150px;
+  }
+} // #more
 
 #footer {
   position: absolute;

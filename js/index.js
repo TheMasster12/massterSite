@@ -11,6 +11,7 @@ MassterSite.resize = function() {
   var height = $(window).height();
   var MAX_HEIGHT = 500;
   var SCREEN_DESKTOP = 992;
+  var scrollTop = $(window).scrollTop();
 
   if($('.start').css('display') != 'none') {
     // Showing start page.
@@ -43,9 +44,24 @@ MassterSite.resize = function() {
       // Showing content page.
       if(self.innerWidth >= SCREEN_DESKTOP) {
         $('.side-nav').css('height',$('.content-pane').outerHeight());
+        $('.side-nav-image').css('margin-top', scrollTop);
       } else {
         $('.side-nav').css('height','');
       }
+  }
+};
+
+MassterSite.scrollSidebar = function() {
+  var SCREEN_DESKTOP = 992;
+  var scrollTop = $(window).scrollTop();
+
+  if($('.content').css('display') != 'none') {
+    if(self.innerWidth >= SCREEN_DESKTOP) {
+      $('.side-nav-image').css('margin-top', scrollTop);
+    }
+    else {
+      $('.side-nav-image').css('margin-top','');
+    }
   }
 };
 
@@ -57,6 +73,10 @@ $(function() {
 
   $(window).resize(function() {
     MassterSite.resize();
+  });
+
+  $(window).scroll(function() {
+    MassterSite.scrollSidebar();
   });
 
   // Click handler for start page header.
