@@ -1,7 +1,7 @@
 /**
  * Javascript - Index
  * Author - Andrew Mass
- * 8/1/2013
+ * 9/2/2013
  */
 
 function MassterSite() {}
@@ -47,6 +47,7 @@ MassterSite.resize = function() {
         $('.side-nav-image').css('margin-top', scrollTop);
       } else {
         $('.side-nav').css('height','');
+        $('.side-nav-image').css('margin-top','');
       }
   }
 };

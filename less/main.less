@@ -1,7 +1,7 @@
 /**
  * Stylesheet - Main
  * Author - Andrew Mass
- * 8/31/2013
+ * 9/2/2013
  */
 
 body {
@@ -29,7 +29,7 @@ body {
   }
 
   #email-link {
-    font-size: 16px !important;   
+    font-size: 16px !important;
   }
 
   .list-group {
@@ -49,9 +49,9 @@ body {
   #header-name {
     font-size: 150px;
   }
-  
+
   #email-link {
-    font-size: 18px !important;   
+    font-size: 18px !important;
   }
 
   .list-group .list-group-item {
@@ -96,7 +96,6 @@ body {
 
 .row {
   text-align: center;
-  margin-right: 0;
 }
 
 .wrapper {
@@ -243,6 +242,7 @@ legend {
   display: none;
 
   #row-content {
+    margin-right: 0;
 
     .side-nav {
       text-align: left;
@@ -250,7 +250,7 @@ legend {
       padding-right: 0;
 
       .side-nav-image {
-        .transition(0.01s all);
+        .transition(@transition-time all);
         cursor: pointer;
         text-align: center;
 
@@ -277,9 +277,9 @@ legend {
         a {
           .transition(@transition-time all);
           color: @grayLight;
-         
+
           &:hover {
-            color: @accent; 
+            color: @accent;
           }
         }
       }
@@ -380,6 +380,19 @@ legend {
   i {
     font-size: 150px;
   }
+
+  .panel {
+    text-align: left;
+
+    legend {
+      margin-bottom: 10px;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 25px;
+    }
+  } // .panel
 } // #development
 
 #physics {
