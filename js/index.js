@@ -6,6 +6,10 @@
 
 function MassterSite() {}
 
+MassterSite.track = function(args) {
+  _gaq.push(args);
+};
+
 // Sets correct heights for various elements based on window height.
 MassterSite.resize = function() {
   var height = $(window).height();
@@ -86,13 +90,16 @@ $(function() {
     window.location.hash = "content";
     $('.start').css('display','none');
     $('.content').css('display', 'block');
+    MassterSite.track(['_trackEvent', 'Start', 'Header']);
     MassterSite.resize();
   });
 
   // Click handler for start page panels.
   $('.start .panel').click(function() {
+    var panelText = $(this).parent().attr('href').substring(1);
     $('.start').css('display','none');
     $('.content').css('display', 'block');
+    MassterSite.track(['_trackEvent', 'Start', 'Panel-' + panelText]);
     MassterSite.resize();
   });
 
@@ -102,7 +109,37 @@ $(function() {
     window.location.hash = "";
     $('.content').css('display','none');
     $('.start').css('display', 'block');
+    MassterSite.track(['_trackEvent', 'Sidebar', 'Image']);
     MassterSite.resize();
+  });
+
+  //Click handler for sidebar email link.
+  $('.content #email-link').click(function() {
+    MassterSite.track(['_trackEvent', 'Sidebar', 'Email']);
+  });
+
+  //Click handler for sidebar social links.
+  $('.social-icon-list .social-icon').click(function() {
+    var linkText = $(this).children('a').children('i').attr('class').substring(5).replace('-sign','');
+    MassterSite.track(['_trackEvent', 'Sidebar', 'Social-' + linkText]);
+  });
+
+  $('.side-nav .list-group a').click(function() {
+    var linkText = $(this).attr('href').substring(1);
+    MassterSite.track(['_trackEvent', 'Sidebar', 'Action-' + linkText]);
+  });
+
+  $('.content a').click(function() {
+    if($(this).data('id')) {
+      console.log($(this).data('id'));
+      MassterSite.track(['_trackEvent', 'Content', $(this).data('id')]);
+    }
+  });
+
+  $('#footer a').click(function() {
+    if($(this).data('id')) {
+      MassterSite.track(['_trackEvent', 'Footer', $(this).data('id')]);
+    }
   });
 
   // Carousel initilization.
