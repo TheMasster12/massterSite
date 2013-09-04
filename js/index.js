@@ -90,7 +90,7 @@ $(function() {
     window.location.hash = "content";
     $('.start').css('display','none');
     $('.content').css('display', 'block');
-    MassterSite.track(['_trackEvent', 'Start', 'Header']);
+    MassterSite.track(['_trackEvent', 'Start', 'Start-Header']);
     MassterSite.resize();
   });
 
@@ -99,7 +99,7 @@ $(function() {
     var panelText = $(this).parent().attr('href').substring(1);
     $('.start').css('display','none');
     $('.content').css('display', 'block');
-    MassterSite.track(['_trackEvent', 'Start', 'Panel-' + panelText]);
+    MassterSite.track(['_trackEvent', 'Start', 'Start-Panel-' + panelText]);
     MassterSite.resize();
   });
 
@@ -109,36 +109,36 @@ $(function() {
     window.location.hash = "";
     $('.content').css('display','none');
     $('.start').css('display', 'block');
-    MassterSite.track(['_trackEvent', 'Sidebar', 'Image']);
+    MassterSite.track(['_trackEvent', 'Sidebar', 'Sidebar-Image']);
     MassterSite.resize();
   });
 
   //Click handler for sidebar email link.
   $('.content #email-link').click(function() {
-    MassterSite.track(['_trackEvent', 'Sidebar', 'Email']);
+    MassterSite.track(['_trackEvent', 'Sidebar', 'Sidebar-Email']);
   });
 
   //Click handler for sidebar social links.
   $('.social-icon-list .social-icon').click(function() {
     var linkText = $(this).children('a').children('i').attr('class').substring(5).replace('-sign','');
-    MassterSite.track(['_trackEvent', 'Sidebar', 'Social-' + linkText]);
+    MassterSite.track(['_trackEvent', 'Sidebar', 'Sidebar-Social-' + linkText]);
   });
 
   $('.side-nav .list-group a').click(function() {
     var linkText = $(this).attr('href').substring(1);
-    MassterSite.track(['_trackEvent', 'Sidebar', 'Action-' + linkText]);
+    MassterSite.track(['_trackEvent', 'Sidebar', 'Sidebar-Action-' + linkText]);
   });
 
   $('.content a').click(function() {
     if($(this).data('id')) {
       console.log($(this).data('id'));
-      MassterSite.track(['_trackEvent', 'Content', $(this).data('id')]);
+      MassterSite.track(['_trackEvent', 'Content', 'Content' + $(this).data('id')]);
     }
   });
 
   $('#footer a').click(function() {
     if($(this).data('id')) {
-      MassterSite.track(['_trackEvent', 'Footer', $(this).data('id')]);
+      MassterSite.track(['_trackEvent', 'Footer', 'Footer' + $(this).data('id')]);
     }
   });
 
