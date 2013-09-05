@@ -1,88 +1,12 @@
 /**
  * Stylesheet - Main
  * Author - Andrew Mass
- * 9/2/2013
+ * 9/5/2013
  */
 
 body {
   position: relative;
   font-family: @headings-font-family;
-}
-
-@media only screen and (min-width: @screen-sm) {
-  #header-name {
-    font-size: 100px;
-  }
-
-  .border-right {
-    border-right: 1px solid @borderColor !important;
-  }
-
-  .border-left {
-    border-left: 1px solid @borderColor !important;
-  }
-}
-
-@media only screen and (min-width: @screen-md) {
-  #header-name {
-    font-size: 120px;
-  }
-
-  #email-link {
-    font-size: 16px !important;
-  }
-
-  .list-group {
-    text-align: left !important;
-
-    .list-group-item {
-      font-size: 18px !important;
-    }
-  }
-
-  .social-icon a i {
-    font-size: 26px !important;
-  }
-}
-
-@media only screen and (min-width: @screen-lg) {
-  #header-name {
-    font-size: 150px;
-  }
-
-  #email-link {
-    font-size: 18px !important;
-  }
-
-  .list-group .list-group-item {
-    font-size: 24px !important;
-  }
-
-  .social-icon a i {
-    font-size: 36px !important;
-  }
-}
-
-@media only screen and (min-width: 1600px) {
-  #header-name {
-    font-size: 180px;
-  }
-
-  #email-link {
-    font-size: 24px !important;
-  }
-
-  .list-group .list-group-item {
-    font-size: 32px !important;
-  }
-
-  .social-icon a i {
-    font-size: 50px !important;
-  }
-
-  .side-nav-image img {
-    max-width: 250px !important;
-  }
 }
 
 ::-webkit-scrollbar {
@@ -162,8 +86,8 @@ legend {
   border-left: none;
 }
 
-#content #header-name {
-  font-size: 40px;
+#header-name {
+  font-size: 50px;
 }
 
 .section-header {
@@ -205,14 +129,14 @@ legend {
       margin-bottom: 30px;
 
       .panel {
-        .transition(@transition-time all);
+        .transition(@transition-time color);
+        .transition(@transition-time border-color);
         cursor: pointer;
-        font-size: 25px;
-        min-width: 200px;
+        font-size: 18px;
         color: @grayDark;
 
         i {
-          font-size: 180px;
+          font-size: 100px;
         }
 
         .panel-footer {
@@ -221,6 +145,10 @@ legend {
 
         &:hover {
           border-color: @accent;
+
+          i {
+            color: @accent;
+          }
 
           .panel-footer {
             color: @accent;
@@ -430,5 +358,143 @@ legend {
   small {
     margin: 0 10px;
     font-family: @headings-font-family;
+    font-size: 10px;
   }
 } // #footer
+
+@media only screen and (min-width: @screen-xs) {
+  #header-name {
+    font-size: 80px;
+  }
+
+  .start .wrapper .centered .panel {
+    font-size: 25px;
+
+    i {
+      font-size: 180px;
+    }
+  }
+
+  .border-right {
+    border-right: 1px solid @borderColor !important;
+  }
+
+  .border-left {
+    border-left: 1px solid @borderColor !important;
+  }
+}
+
+@media only screen and (min-width: @screen-sm) {
+  #header-name {
+    font-size: 100px;
+  }
+
+  .start .wrapper .centered .panel {
+    font-size: 30px;
+  }
+
+  .border-right {
+    border-right: 1px solid @borderColor !important;
+  }
+
+  .border-left {
+    border-left: 1px solid @borderColor !important;
+  }
+}
+
+@media only screen and (min-width: @screen-md) {
+  #header-name {
+    font-size: 120px;
+  }
+
+  .start .wrapper .centered .panel {
+    font-size: 28px;
+    min-width: 180px;
+
+    i {
+      font-size: 150px;
+    }
+  }
+
+  #email-link {
+    font-size: 16px !important;
+  }
+
+  .list-group {
+    text-align: left !important;
+
+    .list-group-item {
+      font-size: 18px !important;
+    }
+  }
+
+  .social-icon a i {
+    font-size: 26px !important;
+  }
+}
+
+@media only screen and (min-width: @screen-lg) {
+  #header-name {
+    font-size: 150px;
+  }
+
+  .start .wrapper .centered .panel {
+    font-size: 32px;
+    min-width: 200px;
+
+    i {
+      font-size: 180px;
+    }
+  }
+
+  .panel {
+    font-size: 25px;
+
+    i {
+      font-size: 150px;
+    }
+  }
+
+  #email-link {
+    font-size: 18px !important;
+  }
+
+  .list-group .list-group-item {
+    font-size: 24px !important;
+  }
+
+  .social-icon a i {
+    font-size: 36px !important;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  #header-name {
+    font-size: 180px;
+  }
+
+  .start .wrapper .centered .panel {
+    font-size: 40px;
+    min-width: 250px;
+
+    i {
+      font-size: 220px;
+    }
+  }
+
+  #email-link {
+    font-size: 24px !important;
+  }
+
+  .list-group .list-group-item {
+    font-size: 32px !important;
+  }
+
+  .social-icon a i {
+    font-size: 50px !important;
+  }
+
+  .side-nav-image img {
+    max-width: 250px !important;
+  }
+}
