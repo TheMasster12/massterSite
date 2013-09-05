@@ -13,39 +13,19 @@ MassterSite.track = function(args) {
 // Sets correct heights for various elements based on window height.
 MassterSite.resize = function() {
   var height = $(window).height();
-  var MAX_HEIGHT = 500;
   var SCREEN_DESKTOP = 992;
   var scrollTop = $(window).scrollTop();
 
-  if($('.start').css('display') != 'none') {
-    // Showing start page.
-    if($('.centered').height() >= height) {
-      // Window height too small to display content.
-      $('.start').css('height','');
+  if($('.start').css('display') != 'none') { // Showing start page.
+    if($('.centered').height() + 30 >= height) {
+      $('.start').css('height', '');
       $('.start').css('min-height', height);
-    } else {
-      // Window height larger than content height.
-      $('.start').css('min-height','');
-      if(height >= MAX_HEIGHT) {
-        $('.start').css('height', height);
-      } else {
-        $('.start').css('height', MAX_HEIGHT);
-      }
     }
-
-    if(height >= MAX_HEIGHT) {
-      // Window height larger than content height.
-      $('body').css('min-height', height);
-      $('.container.wrapper').css('min-height',height);
-      $('.container.wrapper:before').css('min-height', height);
-    } else {
-      // Window height too small to display content.
-      $('body').css('min-height', MAX_HEIGHT);
-      $('.container.wrapper').css('min-height', MAX_HEIGHT);
-      $('.container.wrapper:before').css('min-height', MAX_HEIGHT);
+    else {
+      $('.start').css('height', height);
+      $('.start').css('min-height', '');
     }
-  } else if($('.content').css('display') != 'none') {
-      // Showing content page.
+  } else if($('.content').css('display') != 'none') { // Showing content page.
       if(self.innerWidth >= SCREEN_DESKTOP) {
         $('.side-nav').css('height',$('.content-pane').outerHeight());
         $('.side-nav-image').css('margin-top', scrollTop);
