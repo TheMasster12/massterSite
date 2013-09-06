@@ -16,7 +16,7 @@ MassterSite.resize = function() {
   var SCREEN_DESKTOP = 992;
   var scrollTop = $(window).scrollTop();
 
-  if($('.start').css('display') != 'none') { // Showing start page.
+  if($('.start').css('display') !== 'none') { // Showing start page.
     if($('.centered').height() + 30 >= height) {
       $('.start').css('height', '');
       $('.start').css('min-height', height);
@@ -25,13 +25,13 @@ MassterSite.resize = function() {
       $('.start').css('height', height);
       $('.start').css('min-height', '');
     }
-  } else if($('.content').css('display') != 'none') { // Showing content page.
+  } else if($('.content').css('display') !== 'none') { // Showing content page.
       if(self.innerWidth >= SCREEN_DESKTOP) {
-        $('.side-nav').css('height',$('.content-pane').outerHeight());
-        $('.side-nav-image').css('margin-top', scrollTop);
+        //$('.side-nav').css('height',$('.content-pane').outerHeight());
+        //$('.side-nav-image').css('margin-top', scrollTop);
       } else {
-        $('.side-nav').css('height','');
-        $('.side-nav-image').css('margin-top','');
+        //$('.side-nav').css('height','');
+        //$('.side-nav-image').css('margin-top','');
       }
   }
 };

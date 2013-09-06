@@ -169,10 +169,46 @@ legend {
 .content {
   display: none;
 
+    .top-nav {
+      display:block;  
+      background-color: @grayDark;
+      color: @grayLight;
+    }
+
+    .social-icon-list {
+        list-style: none;
+        padding: 10px 0;
+        margin: 0;
+        text-align: center;
+        border-top: 1px solid @accent;
+        border-bottom: 1px solid @accent;
+
+        .social-icon {
+          display: inline;
+
+          a {
+
+            i {
+              color: @grayLight;
+              font-size: 60px;
+              padding: 0 5px;
+            }
+
+            &:hover {
+
+              i {
+                color: @accent;
+              }
+            }
+          }
+        } // .social-icon
+      } // .social-icon-list
+
   #row-content {
     margin-right: 0;
 
     .side-nav {
+      display: none;
       text-align: left;
       background-color: @grayDark;
       padding-right: 0;
@@ -434,6 +470,14 @@ legend {
 }
 
 @media only screen and (min-width: @screen-lg) {
+  .content .top-nav {
+    display: none;  
+  }
+
+  .content #row-content .side-nav {
+    display: block;
+  }
+
   #header-name {
     font-size: 150px;
   }
@@ -444,14 +488,6 @@ legend {
 
     i {
       font-size: 180px;
-    }
-  }
-
-  .panel {
-    font-size: 25px;
-
-    i {
-      font-size: 150px;
     }
   }
 
