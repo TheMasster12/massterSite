@@ -1,7 +1,7 @@
 /**
  * Javascript - Index
  * Author - Andrew Mass
- * 9/2/2013
+ * 9/6/2013
  */
 
 function MassterSite() {}
@@ -13,8 +13,6 @@ MassterSite.track = function(args) {
 // Sets correct heights for various elements based on window height.
 MassterSite.resize = function() {
   var height = $(window).height();
-  var SCREEN_DESKTOP = 992;
-  var scrollTop = $(window).scrollTop();
 
   if($('.start').css('display') !== 'none') { // Showing start page.
     if($('.centered').height() + 30 >= height) {
@@ -24,28 +22,6 @@ MassterSite.resize = function() {
     else {
       $('.start').css('height', height);
       $('.start').css('min-height', '');
-    }
-  } else if($('.content').css('display') !== 'none') { // Showing content page.
-      if(self.innerWidth >= SCREEN_DESKTOP) {
-        //$('.side-nav').css('height',$('.content-pane').outerHeight());
-        //$('.side-nav-image').css('margin-top', scrollTop);
-      } else {
-        //$('.side-nav').css('height','');
-        //$('.side-nav-image').css('margin-top','');
-      }
-  }
-};
-
-MassterSite.scrollSidebar = function() {
-  var SCREEN_DESKTOP = 992;
-  var scrollTop = $(window).scrollTop();
-
-  if($('.content').css('display') != 'none') {
-    if(self.innerWidth >= SCREEN_DESKTOP) {
-      $('.side-nav-image').css('margin-top', scrollTop);
-    }
-    else {
-      $('.side-nav-image').css('margin-top','');
     }
   }
 };
@@ -58,10 +34,6 @@ $(function() {
 
   $(window).resize(function() {
     MassterSite.resize();
-  });
-
-  $(window).scroll(function() {
-    MassterSite.scrollSidebar();
   });
 
   // Click handler for start page header.
@@ -111,7 +83,6 @@ $(function() {
 
   $('.content a').click(function() {
     if($(this).data('id')) {
-      console.log($(this).data('id'));
       MassterSite.track(['_trackEvent', 'Content', 'Content' + $(this).data('id')]);
     }
   });
