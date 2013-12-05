@@ -8,6 +8,7 @@ module.exports = (grunt) ->
         options:
           yuicompress: true
           compress: true
+          cleancs: true
         files:
           'dist/style.css': 'less/style.less'
 
