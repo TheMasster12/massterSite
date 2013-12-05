@@ -44,6 +44,12 @@ module.exports = (grunt) ->
       js: ["dist/all.js"]
       res: ["dist/font", "dist/img"]
 
+    connect:
+      all:
+        options:
+          port: 8000,
+          base: 'dist/'
+
     watch:
       less:
         files: ['less/*.less', 'less/bootstrap/*.less']
@@ -65,5 +71,6 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-contrib-copy'
   grunt.loadNpmTasks 'grunt-contrib-clean'
   grunt.loadNpmTasks 'grunt-contrib-watch'
+  grunt.loadNpmTasks 'grunt-contrib-connect'
 
-  grunt.registerTask 'default', ['less', 'concat', 'uglify', 'htmlmin', 'copy', 'clean:js', 'watch']
+  grunt.registerTask 'default', ['less', 'concat', 'uglify', 'htmlmin', 'copy', 'clean:js', 'connect', 'watch']
