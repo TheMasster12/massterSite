@@ -8,16 +8,16 @@ if [ ! -d "./dist" ]; then
 fi
 
 scp -r ./dist/ ubuntu@gs-hq:~/
-ssh ubuntu@gs-hq <<EOF
+ssh ubuntu@gs-hq << 'EOF'
 
-sudo su
-cd /home/apache/mass
-rm -rf /home/apache/mass/**
-cp -r /home/ubuntu/dist/** .
-exit
+  sudo su
+    cd /home/apache/mass
+    rm -rf /home/apache/mass/**
+    cp -r /home/ubuntu/dist/** .
+    exit
 
-rm -rf ~/dist
+  rm -rf ~/dist
 
-exit
+  exit
 
 EOF
